@@ -1,0 +1,59 @@
+{
+  "task": [
+    {
+      "name": "epsi",
+      "description": "software eng",
+      "status": true,
+      "priority": "1",
+      "suggested_solution": "good",
+      "assigned_date": "2023-07-14",
+      "closing_date": "2023-07-15",
+      "assignee": 2,
+      "id": 1
+    },
+    {
+      "name": "tharunya",
+      "description": "software eng",
+      "status": true,
+      "priority": "1",
+      "suggested_solution": "good",
+      "assigned_date": "2023-07-14",
+      "closing_date": "2023-07-15",
+      "assignee": 2,
+      "id": 2
+    },
+    {
+      "name": "murali",
+      "description": "software eng",
+      "status": "false",
+      "priority": "1",
+      "suggested_solution": "good",
+      "assigned_date": "2023-07-14",
+      "closing_date": "2023-07-15",
+      "assignee": 1,
+      "id": 3
+    },
+    {
+      "name": "ajith",
+      "description": "dev",
+      "status": "false",
+      "priority": "1",
+      "suggested_solution": "not bad",
+      "assigned_date": "2023-07-01",
+      "closing_date": "2023-07-31",
+      "assignee": 1,
+      "id": 4
+    },
+    {
+      "name": "kumar",
+      "description": "testing",
+      "status": "true",
+      "priority": "1",
+      "suggested_solution": "good",
+      "assigned_date": "2023-07-01",
+      "closing_date": "2023-07-31",
+      "assignee": 1,
+      "id": 5
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+<h1>Task List</h1>
+<div >
+  <table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Status</th>
+    <th>Action</th>
+  </tr>
+  <tr *ngFor="let task of tasks; let i = index">
+    <td>{{ task.name }}</td>
+    <td>{{ task.description }}</td>
+    <td>{{ task.status }}</td>
+    <td >
+      <button class="btn btn-secondary btn-sm" (click)="updateTaskStatus(task, task.status)">
+        edit status
+      </button>
+      <button style="margin-left: 0.5rem;" class="btn btn-secondary btn-sm" (click)="deleteTask(task)">Delete</button>
+    </td>
+  </tr>
+  </table>
+</div>
+
+<div class="createBut" style="margin-left: 2rem;">
+<button class="btn btn-light" (click)="createTaskForm()">Create New Task</button>
+</div>
+
+<div *ngIf="createData" class="createData" >
+  <form [formGroup]="newTaskForm" (submit)="createTask()">
+    <div >
+      <label for="name" class="createlable">Name:</label>
+      <input type="text" id="name" formControlName="name" placeholder="Enter the Name">
+    </div>
+    <div>
+      <label for="description" class="createlable">Description:</label>
+      <input type="text" id="description" formControlName="description" placeholder="Enter the description">
+    </div>
+    <div>
+      <label for="status" class="createlable">Status:</label>
+      <select id="status" formControlName="status">
+        <option value="true">Active</option>
+        <option value="false">Inactive</option>
+      </select>
+    </div>
+    <div>
+      <label for="priority" class="createlable">Priority:</label>
+      <select id="priority" formControlName="priority">
+        <option value="0">Low</option>
+        <option value="1">Medium</option>
+        <option value="2">High</option>
+      </select>
+    </div>
+    <div>
+      <label for="suggested_solution" class="createlable">Suggested Solution:</label>
+      <input type="text" id="suggested_solution" formControlName="suggested_solution" placeholder="our suggestion">
+    </div>
+    <div>
+      <label for="assigned_date" class="createlable">Assigned Date:</label>
+      <input type="date" id="assigned_date" formControlName="assigned_date">
+    </div>
+    <div>
+      <label for="closing_date" class="createlable">Closing Date:</label>
+      <input type="date" id="closing_date" formControlName="closing_date">
+    </div>
+    <div>
+      <label for="assignee" class="createlable">Assignee:</label>
+      <input type="number" id="assignee" formControlName="assignee" placeholder="our assignee num">
+    </div>
+    <button type="submit" class="btn btn-light" style="margin-left: 7rem;
+    margin-top: 1rem;">Create Task</button>
+  </form>
+
+</div>
